@@ -43,12 +43,20 @@ public class MainActivity extends AppCompatActivity {
                 //By calling the trim() method, a new String object is returned.
                 //It doesn’t replace the value of String object. Therefore if we want the access to the new String object, we just need to reassign it to the old String or assign it to a new variable.
 
-                Intent intent = new Intent(MainActivity.this, ShowGuess.class);
+                if(!guess.isEmpty())
+                {
 
-                intent.putExtra("guess", guess);
+                    Intent intent = new Intent(MainActivity.this, ShowGuess.class);
+
+                    intent.putExtra("guess", guess);
 
 //                startActivity(new Intent(MainActivity.this, ShowGuess.class));  //can do this way too
-                startActivity(intent);
+                    startActivity(intent);
+                }
+                else
+                {
+                    Toast.makeText(MainActivity.this, "Enter Guess!", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
