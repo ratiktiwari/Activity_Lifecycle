@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
         showGuess.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ShowGuess.class);
-                startActivity(intent);
+//                Intent intent = new Intent(MainActivity.this, ShowGuess.class);
+                startActivity(new Intent(MainActivity.this, ShowGuess.class));  //can do this way too
             }
         });
 
@@ -32,40 +32,40 @@ public class MainActivity extends AppCompatActivity {
 //        Log.i("Cycle","onCreate()");
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Toast.makeText(MainActivity.this, "onStart() Called", Toast.LENGTH_SHORT).show();
-        Log.i("Cycle","onStart()");
-    }
-
-    @Override
-    protected void onResume() {   // onPostResume() and onResume() is the same thing essentially
-        super.onResume();
-        Toast.makeText(MainActivity.this, "onResume() Called", Toast.LENGTH_SHORT).show();
-        Log.i("Cycle","onResume()");
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Toast.makeText(MainActivity.this, "onPause() Called", Toast.LENGTH_SHORT).show();
-        Log.i("Cycle","onPause()");
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Toast.makeText(MainActivity.this, "onStop() Called", Toast.LENGTH_SHORT).show();
-        Log.i("Cycle","onStop()");
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Toast.makeText(MainActivity.this, "onDestroy() Called", Toast.LENGTH_SHORT).show();
-        Log.i("Cycle","onDestroy()");
-    }
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
+//        Toast.makeText(MainActivity.this, "onStart() Called", Toast.LENGTH_SHORT).show();
+//        Log.i("Cycle","onStart()");
+//    }
+//
+//    @Override
+//    protected void onResume() {   // onPostResume() and onResume() is the same thing essentially
+//        super.onResume();
+//        Toast.makeText(MainActivity.this, "onResume() Called", Toast.LENGTH_SHORT).show();
+//        Log.i("Cycle","onResume()");
+//    }
+//
+//    @Override
+//    protected void onPause() {
+//        super.onPause();
+//        Toast.makeText(MainActivity.this, "onPause() Called", Toast.LENGTH_SHORT).show();
+//        Log.i("Cycle","onPause()");
+//    }
+//
+//    @Override
+//    protected void onStop() {
+//        super.onStop();
+//        Toast.makeText(MainActivity.this, "onStop() Called", Toast.LENGTH_SHORT).show();
+//        Log.i("Cycle","onStop()");
+//    }
+//
+//    @Override
+//    protected void onDestroy() {
+//        super.onDestroy();
+//        Toast.makeText(MainActivity.this, "onDestroy() Called", Toast.LENGTH_SHORT).show();
+//        Log.i("Cycle","onDestroy()");
+//    }
 
 
 }
