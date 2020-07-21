@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Activity Lifecycle</string>
+    <string name="guess_the_name">Guess The Name</string>
+    <string name="add_guess">Enter Guess</string>
 </resources>
