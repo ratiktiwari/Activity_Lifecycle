@@ -2,7 +2,9 @@ package com.example.activitylifecycle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.nfc.Tag;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 public class ShowGuess extends AppCompatActivity {
@@ -16,9 +18,18 @@ public class ShowGuess extends AppCompatActivity {
 
         textview = findViewById(R.id.textView);
 
-        if(getIntent().getStringExtra("guess")!=null)
+        Bundle extra = getIntent().getExtras();
+
+//        if(getIntent().getStringExtra("guess")!=null)
+//        {
+//            textview.setText(getIntent().getStringExtra("guess"));
+//        }
+
+        if(extra!=null)
         {
-            textview.setText(getIntent().getStringExtra("guess"));
+            textview.setText(extra.getString("guess"));
+            Log.d("Name Extra", "onCreate: " + extra.getString("Name"));
+            Log.d("Age Extra", "onCreate: " + extra.getInt("Age"));
         }
     }
 }

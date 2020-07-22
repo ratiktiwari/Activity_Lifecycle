@@ -49,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(MainActivity.this, ShowGuess.class);
 
                     intent.putExtra("guess", guess);
+                    intent.putExtra("Name", "Ratik");
+                    intent.putExtra("Age", 20);
 
 //                startActivity(new Intent(MainActivity.this, ShowGuess.class));  //can do this way too
                     startActivity(intent);
